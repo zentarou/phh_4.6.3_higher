@@ -11,5 +11,11 @@ function showElement(value, key){
     console.log(key + ' : ' + value);
 }
 
+// コールバック関数
+function showDecoratedElement(value, key) {
+    // console.log ('キー(' + key +') :値(' + value + ')');
+    console.log (`キー (${key}): 値(${value})`);
+}
+
 var ary = [1, 2, 4, 8, 16];
-// arrayWalk(ary, showElement);
+ arrayWalk(ary, showDecoratedElement);
