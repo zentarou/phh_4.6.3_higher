@@ -1,13 +1,15 @@
 // 高階関数
-function myHigherFunction (func) {
-    console.log ('myHigherFunction');
-
-    func()
+function arrayWalk(data,f) {
+    for(var key in data){
+        f(data[key],key);
+    }
 }
 
-// (普通の)関数
-function outsideFunction () {
-    console.log ('outsideFunction');
+// 配列を処理するためのユーザー定義関数
+// コールバック関数
+function showElement(value, key){
+    console.log(key + ' : ' + value);
 }
 
-myHigherFunction (outsideFunction); 
+var ary = [1, 2, 4, 8, 16];
+// arrayWalk(ary, showElement);
