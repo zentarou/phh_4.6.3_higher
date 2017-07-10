@@ -1,8 +1,8 @@
 // 高階関数
-function myHigherFunction (func) {
+function myHigherFunction () {
     console.log ('myHigherFunction');
 
-    func()
+    return outsideFunction ;
 }
 
 // (普通の)関数
@@ -10,4 +10,5 @@ function outsideFunction () {
     console.log ('outsideFunction');
 }
 
-myHigherFunction (outsideFunction); 
+let returnValue = myHigherFunction (); 
+returnValue ();
